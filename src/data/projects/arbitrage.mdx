@@ -1,0 +1,19 @@
+---
+name: Real-Time Crypto Arbitrage Bot
+type: core
+source: https://github.com/vedanthnyk25/triangle_arbitrage
+technologies:
+  - Go
+  - WebSockets
+  - Redis
+  - Algorithms
+description: A high-frequency trading bot that detects triangular arbitrage opportunities across multiple cryptocurrency exchanges in real-time.
+---
+
+## Overview
+This bot is designed to find and act on price discrepancies between different currency pairs. It leverages advanced graph algorithms and high-speed data ingestion to identify profitable trades before the market corrects.
+
+## Key Features
+- **Bellman-Ford Algorithm**: Implemented for detecting negative cycles in currency exchange graphs, identifying arbitrage paths.
+- **High-Speed Ingestion**: Uses WebSockets to stream live market data from various exchange APIs simultaneously.
+- **Low Latency**: Built with Go’s concurrency primitives to ensure millisecond-level execution.
