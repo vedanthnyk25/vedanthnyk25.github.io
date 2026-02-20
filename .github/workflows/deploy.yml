@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main ] # Ensure your primary branch is named 'main'
 
 permissions:
   contents: read
@@ -15,11 +15,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9 # This tells the action to use pnpm version 9
-
       - name: Install, build, and upload
         uses: withastro/action@v3
+        # withastro/action handles npm install and npm run build automatically
